@@ -1,0 +1,42 @@
+{% extends "material/base.html" %}
+{% import "material/utils.html" as util %}
+{% import "material/wtf.html" as wtf %}
+
+{% block title %}Sunway-Lancaster MBA Assignment - Stock Code{% endblock %}
+
+
+
+{% block navbar %}
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">&nbsp;</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/stockcode/sample">Stock Code Sample</a></li>
+        <li><a href="http://www.bursamalaysi    a.com/market/listed-companies/">Bursa Malaysia</a></li>
+      </ul>
+    </div>
+  </nav>
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            {{ util.card('Selamat Datang!', '<p>This is a simple page to keep track of our assignment topic based on stock code.</p><p>&nbsp;</p><p>If you have not decided any listed company for your assignment, do check out <a href="http://www.bursamalaysia.com/market/listed-companies/">Bursa Malaysia</a> for more details.</p><p>&nbsp;</p><p>If you are unsure what is stock code, check out this <a href="/stockcode/sample">page</a>.</p>')}}
+        </div>
+    </div>      
+    <div class="row">
+        <div class="col s12">
+            {{ util.card('I have decided!', wtf.quick_form(form) )}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            {{ util.card('Reserved Company Listing', reserved_content )}}
+        </div>
+    </div>
+</div>
+{% endblock %}
+

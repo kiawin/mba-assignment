@@ -1,0 +1,30 @@
+{% extends "material/base.html" %}
+{% import "material/utils.html" as util %}
+{% import "material/wtf.html" as wtf %}
+
+{% block title %}Sunway-Lancaster MBA Assignment - Stock Code Reserved{% endblock %}
+
+{% block navbar %}
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">&nbsp;</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/stockcode/sample">Stock Code Sample</a></li>
+        <li><a href="http://www.bursamalaysi    a.com/market/listed-companies/">Bursa Malaysia</a></li>
+      </ul>
+    </div>
+  </nav>
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            {{ util.card('Sorry :(', '<p>Stock code already reserved by others</p>', [['/', 'Try another one']])}}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
