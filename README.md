@@ -1,18 +1,21 @@
 # mba-assignment
 A Simple Assignment Portal for Lancaster MBA Programme 
 
-
-
-## Package dependency
+## Dependencies
 
 ```
-apt-get install uwsgi sqlite3 python-virtualenv python-pip
+pip install docker-compose
 ```
 
-### Generate sqlite3 database
+## Deployment
 
 ```
-cat schema.sql | sqlite3 web/assignment.db
+git clone git@github.com:kiawin/mba-assignment.git assignment
+cd assignment
+docker build -t assignment .
+docker-compose up -d
+
+# curl localhost:5000
 ```
 
 ## Useful References
